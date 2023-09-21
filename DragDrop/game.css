@@ -1,0 +1,37 @@
+
+body {
+    background-color: #20303c;
+    /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
+}
+table {
+    border-collapse: collapse;
+    margin: auto;
+    background-color: #faf5f5;
+    border: 0.3em dotted rgb(236, 230, 230);
+}
+
+#table {
+    text-align: center;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.container {
+    justify-content: center;
+    display: flex;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+.container td {
+    height: 100px;
+    width: 100px;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+}
+
+td:not(table td) {
+    padding: 0px;
+}
