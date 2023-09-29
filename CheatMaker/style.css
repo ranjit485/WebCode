@@ -1,0 +1,33 @@
+
+table {
+    line-height:normal;
+    background-color: #ffffff;
+    border-collapse: collapse;
+    border-width: 0.1px;
+    /* border-color:black; */
+    /* border-style: solid; */
+    width:950px;
+    color: #000000;
+  }
+  
+   td{
+    /* border-width: 0.1px;
+    border-color:black;
+    border-style: solid; */
+    text-emphasis-position:top;
+    width: 135px;
+    height: 200px;
+    white-space:pre-line;
+    letter-spacing:normal;
+    font-size:1%;
+  }
+  textarea{
+    height: 100%;
+    width: 135px;
+    scrollbar-width: 0px;
+    text-emphasis-position:top;
+    white-space:pre-line;
+    letter-spacing:normal;
+    font-size:1%;
+
+  }
