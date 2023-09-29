@@ -15,7 +15,9 @@ function createTable() {
             parentBox.id = 'parentBox';
             let childBox = document.createElement('td');
             let img = document.createElement('img');
-            childBox.id = 'childBox';
+            img.id='ImageBx';
+            img.draggable='true';
+            childBox.id = 'ImgBox';
             childBox.draggable = true;
             tr.appendChild(parentBox);
             parentBox.appendChild(childBox);
@@ -25,6 +27,50 @@ function createTable() {
 
         }
     }
+
+    let TempTable = document.getElementById('TempTable');
+    for (let rows = 0; rows <= 0; rows++) {
+
+        let tr = document.createElement('tr');
+        table.appendChild(tr);
+        for (let col = 0; col < 4; col++) {
+
+            let pBox = document.createElement('td');
+            pBox.id = 'pBox';
+
+            let tempBox = document.createElement('td');
+            tempBox.id='tempBox';
+
+            tr.appendChild(pBox);
+            pBox.appendChild(tempBox);
+            index++;
+
+        }
+    }
+
+/// drag drop logic 
+
+const TempBox = document.getElementById('tempBox');
+const cBox = document.getElementById('ImageBx');
+
+cBox.addEventListener('dragstart',()=>{
+    console.log("drg Start");
+
+})
+
+TempBox.addEventListener('dragEnd',()=>{
+console.log("drgEnd");
+
+});
+
+
+
+
+
+
+
+
+
 }
 const gOne = [];
 gOne[0] = 'https://i.ibb.co/7Jr28bn/1.jpg';

@@ -34,4 +34,7 @@ img {
 
 td:not(table td) {
     padding: 0px;
-}7
+}
+#pBox {
+    border: 0.1px dotted rgb(254, 252, 252);
+}
