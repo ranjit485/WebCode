@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider</title>
+</head>
+<body onload="load()">
+    <img id="imge" height="300" width="300">
+    <button onclick="next()">NEXT</button>
+    <button onclick="previous()">PRIVIOUS</button>
+
+    <script>
+        
+        var position=0;
+        const imges = [];
+        imges[0] = 'images/Gone/1.jpg';
+        imges[1] = 'images/Gone/2.jpg';
+        imges[2] = 'images/Gone/3.jpg';
+
+
+let i = document.getElementById('imge');
+i.src = imges[position];
+
+function next(){
+    position++;
+
+    if(position == 3){
+        position=0;
+    }
+
+    i.src = imges[position];
+}
+
+function previous(){
+    position--;
+    i.src = imges[position];
+}
+
+setInterval(() => {
+            next();
+}, 1000);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!-- Q.11 Develop a webpage for placing the window on the screen and working with child window. (Arithmetic)/Convert temp to
+fahr /fibonacci series/ factorial/ Armstrong/ palindrome.
+*arithmetic.html -->
+<html>
+
+<head>
+    <title>Arithmetic</title>
+</head>
+
+<body>
+    <input type=button onclick="subtraction()" value="Subtraction" />
+    <input type=button onclick="multiplication()" value="Multiplication" />
+    <input type=button onclick="division()" value="Division" />
+    <script>
+
+        function subtraction() {
+            var a = prompt("Enter any number: ");
+            var b = prompt("Enter any number: ");
+            var c = a - b;
+            document.write("Subtraction: <br>", c);
+        }
+
+        function multiplication() {
+            var a = prompt("Enter any number: ");
+            var b = prompt("Enter any number: ");
+            var c = a * b;
+            document.write("Multiplication: <br>", c);
+        }
+
+        function division() {
+            var a = prompt("Enter any number: ");
+            var b = prompt("Enter any number: ");
+            var c = a / b;
+            document.write("Division: <br>", c);
+        }
+    </script>
+</body>
+
+</html>

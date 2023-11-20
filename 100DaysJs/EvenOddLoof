@@ -1,0 +1,18 @@
+<!-- Q.4 Develop Javascript to use Looping statement(1-50 Even no.). -->
+<html>
+
+<head>
+    <title>Even</title>
+</head>
+
+<body>
+    <script>
+        for (i = 1; i <= 50; i++) {
+            if ((i % 2) == 0)
+                document.write(i);
+            document.write("<br>");
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!-- Q.15 Write a javascript program to create a cookie -->
+<html>
+
+<head>
+    <script>
+        function set() {
+            if (document.mf.user.value == "") {
+                alert("Enter Some Value");
+                return;
+            }
+            cookievalue = escape(document.mf.user.value) + ";";
+            key = "name";
+            document.cookie = key + "=" + cookievalue;
+            document.write("Setting cookies: " + key + "=" + cookievalue);
+        }
+
+    </script>
+</head>
+
+<body>
+    <form name="mf" action="Get">
+        Enter Name:<input type="text" name="user" /><br>
+        <input type="button" value="SetCookie" onclick="set()" /><br>
+    </form>
+</body>
+
+</html>

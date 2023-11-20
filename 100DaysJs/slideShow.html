@@ -1,0 +1,35 @@
+<!-- Q.14 Develop a webpage for implementing slideshow and banner. -->
+<html>
+
+<head>
+    <title>Banner and slideshow</title>
+</head>
+
+<body>
+    <a href="images/js2.png">Banner</a>
+    <br>
+    <br>
+    <script>
+        var i = ["images/js.png", "images/2.png", "images/js2.png"];
+        var c = 0;
+        function prev() {
+            if (c != 0)
+                c--;
+            var id = document.getElementById("imgid");
+            id.src = i[c];
+        }
+        function next() {
+            if (c < 2)
+                c++;
+            var id = document.getElementById("imgid");
+            id.src = i[c];
+        }
+    </script>
+    <center>
+        <img id="imgid" src="images/js.png" width="300" height="200" /><br><br>
+        <input type=button value="prev image" onclick="prev()" />
+        <input type=button value="next image" onclick="next()" />
+    </center>
+</body>
+
+</html>

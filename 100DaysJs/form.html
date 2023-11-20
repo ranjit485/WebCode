@@ -1,0 +1,28 @@
+<!-- Q.9 Create Web page using form elements. -->
+<html>
+
+<head>
+    <title>UserId</title>
+</head>
+
+<body>
+    <form name="login">
+        <input type="label" value="Enter Username :">
+        <input type="text" name=UserId><br><br>
+
+        <input type="label" value="Enter Password :">
+        <input type="password" name=password><br><br>
+
+        <input type="radio" value="Male" name="gender">Male</input>
+        <input type="radio" value="Female" name="gender">Female</input>
+
+        <input type=button onclick=display() value=Display>
+    </form>
+    <script>
+        function display() {
+            document.write("UserID:" + login.UserId.value + "<br><br>" + "Password:" + login.password.value + "<br><br>" + "Gender:" + login.gender.value);
+        }
+    </script>
+</body>
+
+</html>

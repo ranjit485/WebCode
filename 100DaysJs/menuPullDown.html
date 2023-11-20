@@ -1,0 +1,29 @@
+<!-- Q.13 Develop a webpage for implementing menus. (Pull Down) -->
+<html>
+
+<head>
+    <title>Pull Down</title>
+    <script>
+        function drop() {
+            var l = document.getElementById("option");
+            document.getElementById("city").value = l.options[l.selectedIndex].text;
+        }
+    </script>
+</head>
+
+<body>
+    <form>
+        <b>Select city</b>
+
+        <select id="option" onchange="drop()">
+            <option>---select---</option>
+            <option>Mumbai</option>
+            <option>Pune</option>
+        </select>
+
+        Selected City is:
+        <input type="text" id="city" size="20" />
+    </form>
+</body>
+
+</html>

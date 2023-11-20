@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+          <button onclick="openCity('London')">London</button>
+          <button onclick="openCity('Paris')">Paris</button>
+        
+        <div id="London" class="city">
+          <h2>London</h2>
+          <p>London is the capital city of England.</p>
+        </div>
+        
+        <div id="Paris" class="city" style="display:none">
+          <h2>Paris</h2>
+          <p>Paris is the capital of France.</p> 
+        </div>
+        
+        
+        <script>
+        function openCity(cityName) {
+          var i;
+          var x = document.getElementsByClassName("city");
+          
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";  
+          
+        }
+          document.getElementById(cityName).style.display = "block";  
+        }
+
+        </script>
+</body>
+</html>

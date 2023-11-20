@@ -1,0 +1,24 @@
+<!-- Q.12 Develop a webpage for validation of form fields using regular expression. -->
+<html>
+
+<head>
+    <title>name validation</title>
+</head>
+
+<body>
+    <script>
+
+        var s = prompt("Enter name");
+        var r = /[\d]/g;
+        var m = s.match(r);
+
+        if (m != null)
+            alert("Enter name");
+        else
+            document.write(s);
+        document.write("</br>");
+
+    </script>
+</body>
+
+</html>
